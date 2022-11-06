@@ -920,14 +920,14 @@ Nesting of member Function : using a member function inside another member Funct
 using namespace std;
 class hero{
     int health ;
-    char *name ;
+    char *name = new char[100] ;          // Allocating memory dynamically 
     char level ;
     public : 
         void sethealth(int x){
             this->health = x ;
         }
         void setname(char name1[]){
-            name = new char[100] ;
+            // name = new char[100] ;
             this ->name = name1;
         }
         void setlevel(char lvl){
